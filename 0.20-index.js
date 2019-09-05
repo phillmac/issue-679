@@ -12,11 +12,7 @@ const ipfs = new IPFS({
 ipfs.on('ready', async() => {
   const messagesDbConfig = {
     type: 'feed',
-    create: true,
-    accessController: {
-      admin: ['*'],
-      write: ['*']
-    }
+    create: true
   };
 
   const identity = await Identities.createIdentity({ id: "A"})
