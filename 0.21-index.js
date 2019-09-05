@@ -15,7 +15,7 @@ ipfs.on('ready', async() => {
 
   const identity = await Identities.createIdentity({ id: "A"})
   const orbitDbInstance = await OrbitDB.createInstance(ipfs, { identity })
-  messagesDb = await orbitDbInstance.open('/orbitdb/zdpuAp9qznrkEa8A1JFv6YyrEfdnhhxgaJyPCW5SKyjoZZFPv/messages', messagesDbConfig)
+  messagesDb = await orbitDbInstance.open('/orbitdb/zdpuAxBZ32b5b5k848aaZGrCNZCjmPTaZtaG6VDS65RPFHyz8/messages', messagesDbConfig)
   await messagesDb.load()
   await messagesDb.add("X")
   console.log(Object.keys(messagesDb.index).length + " entries in log")
