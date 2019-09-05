@@ -11,7 +11,6 @@ const ipfs = new IPFS({
 
 ipfs.on('ready', async() => {
   const messagesDbConfig = {
-    type: 'feed'
   };
 
   const identity = await Identities.createIdentity({ id: "A"})
